@@ -142,19 +142,19 @@ http://localhost:8080/students
 
 ---
 
-## Evidencias
+# Evidencias
 
-### Prueba POST /students
+## Prueba POST /students
 
-Insertar captura de pantalla de Postman.
+![POST Student](evidencias/postman-post.png)
 
-### Prueba GET /students
+## Prueba GET /students
 
-Insertar captura de pantalla de Postman.
+![GET Students](evidencias/postman-get.png)
 
-### Consola H2
+## Consola H2
 
-Insertar captura de pantalla mostrando la tabla STUDENTS y sus registros.
+![H2 Console](evidencias/h2-console.png)
 
 ---
 
