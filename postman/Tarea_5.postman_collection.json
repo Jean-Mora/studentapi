@@ -1,0 +1,49 @@
+{
+  "info": {
+    "_postman_id": "d2609717-1553-4dff-9ddb-77976f9e757d",
+    "name": "Tarea_5",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54540741",
+    "_collection_link": "https://go.postman.co/collection/54540741-d2609717-1553-4dff-9ddb-77976f9e757d?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Request de Post",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/students",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "students"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Request de Get",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/students",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "students"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
