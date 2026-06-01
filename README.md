@@ -2,9 +2,20 @@
 
 ## Descripción
 
-Este proyecto consiste en una API REST desarrollada con Spring Boot y Kotlin para la gestión de estudiantes. La aplicación permite registrar estudiantes y consultar todos los estudiantes almacenados en una base de datos H2.
+Este proyecto corresponde al desarrollo de una API REST utilizando Spring Boot y Kotlin para la gestión de estudiantes. La aplicación permite registrar estudiantes y consultar todos los estudiantes almacenados en una base de datos H2.
 
-La solución implementa una arquitectura por capas utilizando Controller, Service y Repository, siguiendo las buenas prácticas de desarrollo con Spring Boot.
+La solución fue desarrollada siguiendo una arquitectura por capas, separando las responsabilidades en Controller, Service y Repository, con el objetivo de mantener un código organizado, escalable y fácil de mantener.
+
+---
+
+## Objetivo
+
+Implementar una API REST que permita:
+
+* Registrar estudiantes.
+* Consultar todos los estudiantes registrados.
+* Almacenar la información en una base de datos H2.
+* Aplicar una arquitectura por capas utilizando Spring Boot y Kotlin.
 
 ---
 
@@ -25,23 +36,33 @@ La solución implementa una arquitectura por capas utilizando Controller, Servic
 src/main/kotlin/ec/edu/puce/studentapi
 ├── controller
 │   └── StudentController.kt
-├── service
-│   └── StudentService.kt
-├── repository
-│   └── StudentRepository.kt
-├── entity
-│   └── Student.kt
 ├── dto
 │   ├── StudentRequest.kt
 │   └── StudentResponse.kt
+├── entity
+│   └── Student.kt
+├── repository
+│   └── StudentRepository.kt
+├── service
+│   └── StudentService.kt
 └── StudentapiApplication.kt
 ```
+
+### Descripción de las capas
+
+| Capa       | Responsabilidad                                                 |
+| ---------- | --------------------------------------------------------------- |
+| Controller | Recibe las solicitudes HTTP y devuelve las respuestas.          |
+| Service    | Contiene la lógica de negocio de la aplicación.                 |
+| Repository | Gestiona el acceso a la base de datos mediante Spring Data JPA. |
+| Entity     | Representa la tabla almacenada en la base de datos.             |
+| DTO        | Define la información que entra y sale de la API.               |
 
 ---
 
 ## Entidad Student
 
-La entidad Student contiene los siguientes atributos:
+La entidad utilizada en el proyecto es:
 
 | Campo | Tipo   |
 | ----- | ------ |
@@ -51,13 +72,13 @@ La entidad Student contiene los siguientes atributos:
 
 ---
 
-## Endpoints
+## Endpoints implementados
 
 ### Crear estudiante
 
 **POST** `/students`
 
-#### Request Body
+#### Request
 
 ```json
 {
@@ -78,7 +99,7 @@ La entidad Student contiene los siguientes atributos:
 
 ---
 
-### Listar estudiantes
+### Obtener todos los estudiantes
 
 **GET** `/students`
 
@@ -116,25 +137,25 @@ Contraseña:
 
 ## Ejecución del proyecto
 
-1. Clonar el repositorio:
+### Clonar repositorio
 
 ```bash
 git clone <URL_DEL_REPOSITORIO>
 ```
 
-2. Ingresar al proyecto:
+### Ingresar al proyecto
 
 ```bash
 cd studentapi
 ```
 
-3. Ejecutar la aplicación:
+### Ejecutar la aplicación
 
 ```bash
 ./gradlew bootRun
 ```
 
-4. Acceder a la API:
+### Acceder a la API
 
 ```text
 http://localhost:8080/students
@@ -142,26 +163,38 @@ http://localhost:8080/students
 
 ---
 
-# Evidencias
+## Evidencias
 
-## Prueba POST /students
+### Prueba POST /students
 
 ![POST Student](evidencias/postman-post.png)
 
-## Prueba GET /students
+### Prueba GET /students
 
 ![GET Students](evidencias/postman-get.png)
 
-## Consola H2
+### Consulta en H2
 
 ![H2 Console](evidencias/h2-console.png)
 
 ---
 
+## Colección Postman
+
+La colección utilizada para las pruebas se encuentra en la carpeta:
+
+```text
+postman/
+```
+
+---
+
 ## Autor
 
-Jean Pierre Mora Santillán
+**Jean Pierre Mora Santillán**
 
 Pontificia Universidad Católica del Ecuador (PUCE)
+
 Tecnología Superior en Desarrollo de Software
 
+---
